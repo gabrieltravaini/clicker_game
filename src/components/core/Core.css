@@ -1,3 +1,9 @@
+.bg-gradient {
+    background: radial-gradient(#e66465, #9198e5);
+    width: 240px;
+  height: 120px;
+}
+
 .Core-game {
     font-family: Arial, sans-serif;
     background: radial-gradient(circle, #00e0ff, #000, #000, #000);
