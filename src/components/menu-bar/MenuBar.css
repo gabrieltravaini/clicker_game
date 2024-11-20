@@ -1,0 +1,12 @@
+.footer{
+    height: 10vh;
+}
+
+.bot-size{
+    height: 8vh;
+    width: 75%;
+}
+
+.bot:hover{
+    background-color:#387dd1;
+}
