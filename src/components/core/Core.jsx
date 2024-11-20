@@ -3,9 +3,9 @@ import "./Core.css"
 
 const Core = () => {
     return (
-        <div className="Core-game">
-            <div class="main-icon" onclick="incrementScore()">
-                <img src="src\assets\hardware.png" />
+        <div className="flex justify-center items-center core-grad p-64 ">
+            <div className=" min-w-80 place-items-center">
+                <img className='object-contain'src="src\assets\hardware.png" />
             </div>
         </div>
 
