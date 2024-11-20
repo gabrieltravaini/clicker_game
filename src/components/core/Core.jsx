@@ -1,11 +1,12 @@
 import React from "react";
 import "./Core.css"
+import Button from "../Mechanics/Button"
 
-const Core = () => {
+const Core = ({onIncrement}) => {
     return (
         <div className="flex justify-center items-center core-grad p-64 ">
             <div className=" min-w-80 place-items-center">
-                <img className='object-contain'src="src\assets\hardware.png" />
+                <Button onClick={onIncrement}/>
             </div>
         </div>
 

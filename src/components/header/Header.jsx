@@ -1,9 +1,10 @@
 import React from "react";
 import "./Header.css";
+import Score from "../Mechanics/Score"
 
 
 
-const Header = () => {
+const Header = ({score}) => {
 
     return (
         <nav className="navbar m-0 p-0 sep-line">
@@ -11,7 +12,7 @@ const Header = () => {
                 <button className="btn btn-secondary font-Terminal">EXIT</button>
                 <div className="">
                     <div className="text-blue-400 text-center font-Terminal text-2xl">
-                        9999
+                        <Score score={score}/>
                     </div>
                     <div className="text-blue-400 text-center font-Terminal text-xl">
                         99 per/s
