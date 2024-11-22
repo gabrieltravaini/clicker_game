@@ -2,8 +2,9 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import'./Achievements.css'
+import AchievementCard from '../Mechanics/AchievementCard';
 
-function Achievements({ ...props }) {
+function Achievements({achievea, ...props }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -19,8 +20,7 @@ function Achievements({ ...props }) {
           <Offcanvas.Title className='font-Terminal text-white' >Achievements</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className='bg-black l-borda'>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+          <AchievementCard name={'teste'} desc={'Voce testou com sucesso o card'} icon={`src\assets\trofeu.png`}status={achievea}/>
         </Offcanvas.Body>
       </Offcanvas>
     </>

@@ -4,7 +4,7 @@ import './MenuBar.css'
 import Shop from '../Shop/Shop.jsx'
 import Achievements from '../Achievements/Achievements.jsx'
 
-const MenuBar = ({ onButtonClick }) => {
+const MenuBar = ({achievea,  onButtonClick }) => {
     
     return (
 
@@ -14,7 +14,7 @@ const MenuBar = ({ onButtonClick }) => {
                 <Shop onButtonClick={onButtonClick}/>
                 </div>
                 <div className="col items-center flex justify-center p-2">
-                <Achievements/>
+                <Achievements achievea={achievea}/>
                 </div>
             </div>
         </div>
