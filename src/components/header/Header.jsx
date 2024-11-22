@@ -2,9 +2,12 @@ import React from "react";
 import "./Header.css";
 import Score from "../Mechanics/Score"
 
+import Perclick from "../Mechanics/Perclick"
 
 
-const Header = ({score}) => {
+
+const Header = ({score, alt, mult}) => {
+
 
     return (
         <nav className="navbar m-0 p-0 sep-line">
@@ -15,7 +18,9 @@ const Header = ({score}) => {
                         <Score score={score}/>
                     </div>
                     <div className="text-blue-400 text-center font-Terminal text-xl">
-                        99 per/s
+
+                        <Perclick score={score} alt={alt} mult={mult}/>
+
                     </div>
                 </div>
                 <div className="border-blue-900 rounded-2xl p-2 bg-blue-400 hover:bg-blue-500">
