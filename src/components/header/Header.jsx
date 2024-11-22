@@ -1,24 +1,31 @@
 import React from "react";
 import "./Header.css";
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
+import Score from "../Mechanics/Score"
+import Perclick from "../Mechanics/Perclick"
 
 
-const Header = () => {
+
+const Header = ({score, alt, mult}) => {
 
     return (
-        <Container className="top-bar">
-            <Row>
-                <Col><Button variant="secondary">EXIT</Button></Col>
-                <Col xs={8}><div className="score-container">
-                    <div className="score">0</div>
-                    <div className="per-second">12 per/s</div>
-                </div></Col>
-                <Col className="profile-container"><div class="profile-icon">👤</div></Col>
-            </Row>
-        </Container>
+        <nav className="navbar m-0 p-0 sep-line">
+            <div className="container-fluid bg-black py-2 px-16 m-0">
+                <button className="btn btn-secondary font-Terminal">EXIT</button>
+                <div className="">
+                    <div className="text-blue-400 text-center font-Terminal text-2xl">
+                        <Score score={score}/>
+                    </div>
+                    <div className="text-blue-400 text-center font-Terminal text-xl">
+                        <Perclick score={score} alt={alt} mult={mult}/>
+                    </div>
+                </div>
+                <div className="border-blue-900 rounded-2xl p-2 bg-blue-400 hover:bg-blue-500">
+                    <div className="text-4xl">👤</div>
+                </div>
+            </div>
+        </nav>
+
+
 
     )
 }
