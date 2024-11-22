@@ -1,8 +1,13 @@
-import { useState } from 'react'
+
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './App.css'
 import Header from './components/header/Header.jsx'
 import Core from './components/core/Core.jsx'
+
+import './components/core/Core.css'
+
 import MenuBar from './components/menu-bar/MenuBar.jsx'
 
 function App() {
@@ -14,6 +19,7 @@ function App() {
   const raiseScore = () => {
     setScore(score + ((1 + alt) * mult));
   }
+
   const buyUpgrade = (id, cost) => { 
     console.log(id)
     if (score >=cost){
@@ -36,12 +42,15 @@ function App() {
     
   }
 
+
   return (
 
     <div className=''>
+
       <Header score={score} alt={alt} mult={mult}/>
       <Core onIncrement={raiseScore}/>
       <MenuBar onButtonClick={buyUpgrade}/>
+
 
     </div>
   )
