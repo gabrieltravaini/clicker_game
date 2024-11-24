@@ -23,7 +23,7 @@ function Achievements({achievea,achieveb,achievec, ...props }) {
         </Offcanvas.Header>
         <Offcanvas.Body className='bg-black l-borda'>
           <AchievementCard name={'Upgrade Master'} desc={'You bought 10 upgrades!'} icon={achieveaImg}status={achievea}/>
-          <AchievementCard name={'Ultimate Scorer'} desc={'You scored over 1.000.000!'} icon={achievebImg}status={achieveb}/>
+          <AchievementCard name={'Top Scorer'} desc={'You scored over 1.000.000!'} icon={achievebImg}status={achieveb}/>
           <AchievementCard name={'Mouse Breaker'} desc={'You clicked over 300 times!'} icon={achievecImg}status={achievec}/>
         </Offcanvas.Body>
       </Offcanvas>

@@ -23,6 +23,7 @@ function App() {
 
   const[achievec, setAchievec]=useState(false)
   const[countachievec, setCountAchievec]=useState(0)
+  
 
 
 
@@ -52,14 +53,14 @@ function App() {
         let aux=countachievea +1
         setCountAchievea(aux)
         console.log(countachievea)
-        alert('Click ++ Purchased');
+       
       }
       if (id== 2){
         setScore(score-cost)
         setMult (mult+1)
         let aux=countachievea +1
         setCountAchievea(aux)
-        alert('Click X2 Purchased');
+      
       }
 
       if (countachievea >= 9 && achievea ==false){
