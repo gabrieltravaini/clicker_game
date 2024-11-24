@@ -3,7 +3,7 @@ import React from "react";
 const AchievementCard = ({ name, desc, icon, status }) => {
 
 
-    if (status == true) {
+    if (status === true) {
         return (
             <div className="border-3 rounded-lg bg-blue-400 my-4 p-2">
                 {" "}
@@ -22,10 +22,10 @@ const AchievementCard = ({ name, desc, icon, status }) => {
             <div className="border-3 rounded-lg bg-slate-800 my-4 p-2">
                 {" "}
                 <div className="flex items-center justify-between text-gray-600 font-Terminal">
-                    <img style={{ height: 'auto', width: '50px' }} src={icon} alt="" />
+                    <img style={{ height: 'auto', width: '50px' }} src={`src/assets/locked.png`} alt="" />
                     <div>
-                        <h2>{name}</h2>
-                        <p>{desc}</p>{" "}
+                        <h2>{"Locked"}</h2>
+                        <p>{"Realize algo para desbloquear"}</p>{" "}
                     </div>
                 </div>
             </div>
