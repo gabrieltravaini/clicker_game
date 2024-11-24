@@ -7,7 +7,7 @@ const ShopCard = ({ name, id, cost, onButtonClick }) => {
         <h2>{name}</h2> 
         <p>Cost: {cost}</p>{" "}
       </div>
-      <div className="bg-blue-400 rounded-md p-2 text-white font-Terminal font-black text-lg text-center mx-5" onClick={() => onButtonClick(id, cost)}>Purchase</div>{" "}
+      <div className="bg-blue-400 rounded-md p-2 text-white font-Terminal font-black text-lg text-center mx-5 bot" onClick={() => onButtonClick(id, cost)}>Purchase</div>{" "}
     </div>
   );
 };

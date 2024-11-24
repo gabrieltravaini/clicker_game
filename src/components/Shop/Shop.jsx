@@ -23,6 +23,8 @@ function Shop({onButtonClick}) {
           <ShopCard name={'Click++'} id ={'1'} cost={'5'} onButtonClick={onButtonClick}/>
 
           <ShopCard name={'Click X2'} id={'2'} cost={'100'} onButtonClick={onButtonClick}/>
+
+        
         
         </Offcanvas.Body>
       </Offcanvas>
