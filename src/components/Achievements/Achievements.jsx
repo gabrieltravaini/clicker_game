@@ -3,8 +3,10 @@ import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import'./Achievements.css'
 import AchievementCard from '../Mechanics/AchievementCard';
-
-function Achievements({achievea,achieveb, ...props }) {
+import achieveaImg from '../../assets/achievea.png';
+import achievebImg from '../../assets/achieveb.png';
+import achievecImg from '../../assets/achievec.png';
+function Achievements({achievea,achieveb,achievec, ...props }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -20,8 +22,9 @@ function Achievements({achievea,achieveb, ...props }) {
           <Offcanvas.Title className='font-Terminal text-white' >Achievements</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body className='bg-black l-borda'>
-          <AchievementCard name={'First steps'} desc={'Você comprou mais de 10 upgrades'} icon={`src/assets/trofeu.png`}status={achievea}/>
-          <AchievementCard name={'Highscore!'} desc={'Você tem mais de 10 pontos'} icon={`src/assets/gear.png`}status={achieveb}/>
+          <AchievementCard name={'Upgrade Master'} desc={'You bought 10 upgrades!'} icon={achieveaImg}status={achievea}/>
+          <AchievementCard name={'Top Scorer'} desc={'You scored over 1.000.000!'} icon={achievebImg}status={achieveb}/>
+          <AchievementCard name={'Mouse Breaker'} desc={'You clicked over 300 times!'} icon={achievecImg}status={achievec}/>
         </Offcanvas.Body>
       </Offcanvas>
     </>

@@ -17,18 +17,32 @@ function App() {
   const [alt, setAlt] = useState(0);
   const [mult, setMult] = useState(1);
 
-  const [achievea,setAchievea] = useState(false)
-  let [countachievea,setCountAchievea] = useState(0)
+  const [achievea,setAchievea]=useState(false)
+  let [countachievea,setCountAchievea]=useState(0)
 
-  const [achieveb,setAchieveb] = useState(false)
+  const [achieveb,setAchieveb]=useState(false)
+
+  const[achievec, setAchievec]=useState(false)
+  const[countachievec, setCountAchievec]=useState(0)
   
+
+
+
+ 
 
   const raiseScore = () => {
     setScore(score + ((1 + alt) * mult));
+    let aux = countachievec +1 
+    setCountAchievec(aux)
 
-    if (score > 9){
-      setAchieveb (true)
-      console.log(achieveb)
+    if(countachievec >=300 && achievec ==false){
+      setAchievec(true)
+      alert('New achievement Unlocked!')
+    }
+
+    if(score>=1000000 && achieveb ==false){
+      setAchieveb(true)
+      alert('New achievement Unlocked!')
     }
   }
 
@@ -37,24 +51,25 @@ function App() {
   const buyUpgrade = (id, cost) => { 
     if (score >=cost){
       if (id == 1){
-        console.log('entrou')
         setScore(score-cost)
         setAlt (alt+1)
-        console.log(countachievea)
-        let aux = countachievea +1
-        console.log(aux)
+        let aux=countachievea +1
         setCountAchievea(aux)
-        alert('Click ++ Purchased');
+        console.log(countachievea)
+       
       }
       if (id== 2){
         setScore(score-cost)
         setMult (mult+1)
-        setCountAchievea(countachievea+1)
-        alert('Click X2 Purchased');
+        let aux=countachievea +1
+        setCountAchievea(aux)
+      
       }
-      if (countachievea === 9){
-        
-        setAchievea(true);
+
+      if (countachievea >= 9 && achievea ==false){
+        let aux =true;
+        setAchievea(aux);
+        alert('New achievement Unlocked!')
         console.log(achievea)
       }
       
@@ -73,7 +88,7 @@ function App() {
 
       <Header score={score} alt={alt} mult={mult}/>
       <Core onIncrement={raiseScore}/>
-      <MenuBar achievea = {achievea} achieveb = {achieveb} onButtonClick={buyUpgrade}/>
+      <MenuBar achievea={achievea} achieveb={achieveb} achievec={achievec} onButtonClick={buyUpgrade}/>
 
 
     </div>

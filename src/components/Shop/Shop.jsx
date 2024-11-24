@@ -4,7 +4,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import './Shop.css'
 import ShopCard from '../Mechanics/ShopCard';
 
-function Shop({onButtonClick}) {
+function Shop({onButtonClick}) { 
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
