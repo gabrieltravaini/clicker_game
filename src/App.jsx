@@ -26,6 +26,9 @@ function App() {
   const[countachievec, setCountAchievec]=useState(0)
   
 
+  const[upCost1, setUpCost1]=useState(10)
+  const[upCost2, setUpCost2]=useState(100)
+
 
 
  
@@ -53,6 +56,8 @@ function App() {
       if (id == 1){
         setScore(score-cost)
         setAlt (alt+1)
+        setUpCost1(parseInt(upCost1*1.2))
+
         let aux=countachievea +1
         setCountAchievea(aux)
         console.log(countachievea)
@@ -61,6 +66,7 @@ function App() {
       if (id== 2){
         setScore(score-cost)
         setMult (mult+1)
+        setUpCost2(parseInt(upCost2*2))
         let aux=countachievea +1
         setCountAchievea(aux)
       
@@ -88,7 +94,7 @@ function App() {
 
       <Header score={score} alt={alt} mult={mult}/>
       <Core onIncrement={raiseScore}/>
-      <MenuBar achievea={achievea} achieveb={achieveb} achievec={achievec} onButtonClick={buyUpgrade}/>
+      <MenuBar upCost1={upCost1} upCost2={upCost2}achievea={achievea} achieveb={achieveb} achievec={achievec} onButtonClick={buyUpgrade}/>
 
 
     </div>
