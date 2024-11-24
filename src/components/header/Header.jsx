@@ -12,7 +12,7 @@ const Header = ({score, alt, mult}) => {
     return (
         <nav className="navbar m-0 p-0 sep-line">
             <div className="container-fluid bg-black py-2 px-16 m-0">
-                <button className="btn btn-secondary font-Terminal">EXIT</button>
+                <p></p>
                 <div className="">
                     <div className="text-blue-400 text-center font-Terminal text-2xl">
                         <Score score={score}/>
@@ -23,9 +23,7 @@ const Header = ({score, alt, mult}) => {
 
                     </div>
                 </div>
-                <div className="border-blue-900 rounded-2xl p-2 bg-blue-400 hover:bg-blue-500">
-                    <div className="text-4xl">👤</div>
-                </div>
+                <p></p>
             </div>
         </nav>
 
