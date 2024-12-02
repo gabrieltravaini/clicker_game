@@ -2,19 +2,14 @@ import React from "react";
 import { useState } from "react";
 
 const Button = ({onClick}) => {
-    let [ img, setImg ] = useState()
+    const [isSmall, setIsSmall] = useState(false);
+    const handleMouseDown = () => { setIsSmall(true); };
+    const handleMouseUp = () => { setIsSmall(false); };
 
-    function onDown() {
-        setImg('{transform: scale(0.7)}')
-    }
-    function onUp() {
-        setImg('{transform: scale(0.7)}')
-    }
-
-    return(
+    return (
 
 
-        <img className='object-contain' style={{ cursor: 'pointer', img}}  src={'/hardware.png'} onClick={onClick} onMouseDown={onDown} onMouseUp={onUp} />
+        <img className='object-contain' style={{width: isSmall ? '250px' : '400px', transition: 'width 0.05s', cursor: 'pointer' }} src={'/hardware.png'} onClick={onClick} onMouseDown={handleMouseDown} onMouseUp={handleMouseUp} />
 
     )
 
