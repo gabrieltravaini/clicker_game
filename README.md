@@ -1,8 +1,22 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Cyber Clicker
 
-Currently, two official plugins are available:
+Este projeto é o front end de um clicker game e é funcional!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Para executar o projeto:
+Para executar o jogo localmente, para testes, basta abrir a pasta root no terminal e rodar:
+```bash
+npm install
+npm run dev
+```
+
+### Criando uma build para deploy:
+Alternativamente, para fazer um deploy deste jogo em algum serviço de hosting, ao invés do citado acima, rodar:
+```bash
+npm install
+npm run build
+```
+Após executar esses comandos, será gerada uma pasta `dist`. Esta pasta conterá os arquivos prontos para deploy.
+
+Uma vez executados esses passos, vem a parte importante,
+### DIVIRTA-SE!
